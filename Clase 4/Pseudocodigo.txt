@@ -1,0 +1,141 @@
+
+Funcion: Sumar
+
+Variables: nro1, nro2, Suma = 0
+
+Escribir: "Ingrese el primer numero".
+Leer nro1
+
+Escribir: "Ingrese el segundo numero".
+Leer nro2
+
+Suma = nro1 + nro2
+
+Escribir: "La suma es: ", Suma
+
+Fin
+
+
+Funcion: Promedio
+
+Variables: nota1, nota2, nota3, Cont, Suma, Promedio=0.
+
+Escribir: "Ingrese la primera nota".
+Leer nota1
+
+Escribir: "Ingrese la segunda nota".
+Leer nota2
+
+Escribir: "Ingrese la tercera nota".
+Leer nota3
+
+Cont = Contar cuantos numeros se ingresaron
+
+Suma = nota1 + nota2 + nota3
+Promedio = Suma/Cont
+
+Escribir: "El promedio es: ", Promedio
+
+Fin
+
+
+Funcion: Cuadrado
+
+Variables: nro, Cuadrado.
+
+Escribir: "Ingrese numero ".
+Leer nro
+
+Cuadrado = nro*nro
+
+Escribir: "El cuadrado es: ", Cuadrado
+
+Fin
+
+
+Funcion: Ganancia
+
+Variables: montoInicial, periodoMensual, Ganancia (integer)
+Constante: i=interes 2% (0,02) long
+
+
+Ganancia = montoInicial*(1+i)^periodoMensual - montoInicial
+
+Escribir: "La ganancia es: ", Ganancia
+
+Fin
+
+
+
+Funcion: Autos
+
+Variables: modelo, marca = "": string
+
+Escribir: "Ingrese el modelo del auto".
+Leer modelo
+
+Escribir: "Ingrese la marca del auto".
+Leer marca
+
+Escribir: "El auto marca ", marca , " y modelo ", modelo
+
+Fin
+
+
+Funcion: Porcentaje
+
+Variables: numero, porc%, Porcentaje: float
+
+Escribir: "Ingrese el número: ".
+Leer numero
+
+Escribir: "Ingrese el porcentaje".
+Leer porc%
+
+Porcentaje = (numero*porc%)/100;
+
+Escribir: "El porcentaje es ", Porcentaje
+
+Fin
+
+
+Funcion: Sueldo
+
+Variables: montoVenta1, montoVenta2, montoVenta3, GananciaComisiones: integer
+Constante: sueldoBase integer
+           comision 10%	
+
+
+GananciaComisiones = (montoVenta1 + montoVenta2 + montoVenta3)*(comision/100)
+Sueldo: sueldoBase + GananciaComisiones
+
+Escribir: "Tu sueldo es: ", Sueldo, " y por comisiones ganaste: ", GananciaComisiones
+
+Fin
+
+
+
+
+Funcion: Intercambiar
+
+Variables: A, B, C
+
+Asignar  C = A;
+Asignar  A = B;
+Asignar  B = C;
+
+Escribir: "El valor de A es ", A , " y de B es ", B
+
+Fin
+
+
+A=A+B;
+B=A-B;
+A=A-B;
+
+
+
+
+
+
+

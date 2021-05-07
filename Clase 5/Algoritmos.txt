@@ -1,0 +1,282 @@
+Funcion: ParImpar
+
+Variables: nro = 0 (integer)
+
+Escribir: "Ingrese número ".
+Leer nro
+
+Si (nro MOD 2 = 0) entonces 
+	Escribir: "El numero es par"
+Sino 
+	Escribir: "El numero no es par"
+FinSi
+
+Fin Funcion
+
+
+
+Funcion: Múltiplo
+
+Variables: nro = 0 (integer)
+
+Escribir: "Ingrese número ".
+Leer nro
+
+Si (nro MOD 2 = 0) entonces 
+	Escribir: "El numero es multiplo de 2"
+Sino 
+	Escribir: "El numero no es multiplo de 2"
+FinSi
+
+Fin Funcion
+
+
+Funcion: Múltiplo
+
+Variables: nro = 0 (integer)
+
+Escribir: "Ingrese número ".
+Leer nro
+
+Si (nro MOD 3 = 0) entonces 
+	Escribir: "El numero es multiplo de 3"
+Sino 
+	Escribir: "El numero no es multiplo de 3"
+FinSi
+
+Fin Funcion
+
+
+Funcion: Mayor
+
+Variables: nro1, nro2 = 0 (integer)
+
+Escribir: "Ingrese número 1 ".
+Leer nro1
+
+Escribir: "Ingrese número 2 ".
+Leer nro2
+
+Si (nro1 >= nro2) entonces 
+	Escribir: "El numero 1 es mayor o igual que el numero 2"
+Sino 
+	Escribir: "El numero 2 es mayor que el numero 1"
+FinSi
+
+Fin Funcion
+
+Funcion: Menor
+
+Variables: nro1, nro2 = 0 (integer)
+
+Escribir: "Ingrese número 1 ".
+Leer nro1
+
+Escribir: "Ingrese número 2 ".
+Leer nro2
+
+Si (nro1 <= nro2) entonces 
+	Escribir: "El numero 1 es menor o igual que el numero 2"
+Sino 
+	Escribir: "El numero 2 es menor que el numero 1"
+FinSi
+
+Fin Funcion
+
+
+Funcion: SumaPositivaNegativa
+
+Variables: nro1, nro2, Suma = 0 (integer)
+
+Escribir: "Ingrese número 1 ".
+Leer nro1
+
+Escribir: "Ingrese número 2 ".
+Leer nro2
+
+Suma = nro1 + nro2;
+
+Segun Suma
+	( <0 ) Escribir: "La suma es negativa"
+	( =0 ) Escribir: "La suma es cero"
+	( >0 ) Escribir: "La suma es positiva"
+
+FinSegun
+
+Fin Funcion
+
+
+Funcion: Divisible2y5
+
+Numero integer
+
+escribir “Ingrese numero”
+leer Numero 
+
+Si Numero%2==0, y Numero%5==0 entonces
+
+escribir “ Numero es divisible por 2 y por 5”
+
+sino 
+
+	si Numero%2==0, y Numero%5<>0 entonces
+		escribir “ Numero es divisible solo por 2 ”
+	sino 
+		escribir “ Numero es divisible solo por 5 ”
+	finsi
+finsi
+
+Fin Funcion
+
+
+
+
+Funcion: PromedioNotas
+
+Variables: nota1, nota2, nota3, nota4, Suma, Promedio = 0 (integer)
+
+Escribir: "Ingrese nota 1 ".
+Leer nota1
+
+Escribir: "Ingrese nota 2 ".
+Leer nota2
+
+Escribir: "Ingrese nota 3 ".
+Leer nota3
+
+Escribir: "Ingrese nota 4 ".
+Leer nota4
+
+Suma = nota1 + nota2 + nota3 + nota4;
+
+Promedio = Suma / 4;
+
+Si Promedio >= 5 entonces  
+	Escribir: "Alumno aprueba"
+Sino 
+	Escribir: "Alumno no aprueba"
+FinSi
+
+Fin Funcion
+
+
+Funcion: MayordeTresNumeros
+
+Variables: nro1, nro2, nro3 (integer)
+
+Escribir: "Ingrese nro 1 ".
+Leer nro1
+
+Escribir: "Ingrese nro 2 ".
+Leer nro2
+
+Escribir: "Ingrese nro 3 ".
+Leer nro3
+
+Si nro1 > nro2 y nro1 > nro3 entonces  
+	Escribir: "El numero 1 es mayor"
+Sino 
+	Si nro2 > nro1 y nro2 > nro3 entonces  
+		Escribir: "El numero 2 es mayor"
+	Sino 
+		Si nro3 > nro1 y nro3 > nro2 entonces  
+			Escribir: "El numero 3 es mayor"
+		Sino 
+			Escribir: "Los numeros son iguales"
+		FinSi	
+	FinSi	
+FinSi
+
+
+Fin Funcion
+
+
+Funcion: Operacion
+
+Variables: nro1, nro2, Suma = 0, Resta=0, Mult = 0, Division= 0 (integer)
+		   Operacion string
+
+Escribir: "Ingrese número 1 ".
+Leer nro1
+
+Escribir: "Ingrese número 2 ".
+Leer nro2
+
+Escribir: "Ingrese Operacion: S (Suma), R (Resta), M(Multiplacion), D(division) ".
+Leer Operacion
+
+Si (Operacion != 'S' o Operacion != 'R' o Operacion != 'M' o Operacion != 'D' ) entonces
+	Escribir: "Operación no existente ".
+Sino
+	Segun Operacion
+	( ='S' ) { Suma = nro1 + nro2 
+			   Escribir: "La suma es ", Suma }
+	( ='R' ) { Resta = nro1 - nro2 
+			   Escribir: "La resta es ", Resta }
+	( ='M' ) { Mult = nro1 * nro2 
+			   Escribir: "La multiplicacion es ", Mult }
+	( ='D' ) { 
+				Si nro2 = 0 entonces 
+					Escribir: "La division por 0 no existe "
+				Sino
+					Division = nro1/nro2 
+					Escribir: "La division es ", Division
+				FinSi
+			 }
+	FinSegun
+
+FinSi
+
+Fin Funcion
+
+
+Funcion: 1 al 100
+
+
+i=1;
+
+Mientras i<=100 hacer
+
+	Escribir: "Contador ", i
+	i++
+
+FinMientras
+
+Fin Funcion
+
+
+
+Funcion: 100 al 1
+
+i=100;
+
+Hacer 
+
+	Escribir: "Contador ", i
+	i=i-1
+
+Mientras i>=1 	 
+
+Fin Funcion
+
+
+
+Funcion: SumarSoloPares
+
+Variables: cantNumeros, numero, Suma = 0 (integer)
+
+Escribir: "Ingrese cantidadNumeros ".
+Leer cantNumeros
+
+
+Para(i=1; i<cantNumeros; i++) hacer
+
+	Escribir: "Ingrese numero ".
+	Leer numero
+	Si (numero MOD 2 = 0) entonces
+		Suma = Suma + numero	
+	FinSi
+
+finPara
+
+Fin Funcion

@@ -1,0 +1,12 @@
+Proposición: Enunciado que se puede demostrar que es verdadero o falso.
+Alfabeto proposicional:
+• Símbolos proposicionales: p, p0, p1, ..., q, q0, q1, ...
+• Constantes: ⊥, ⊤
+• Conectivas lógicas: Negación: ¬ Condicional: →
+Conjunción: ∧ Equivalencia: ↔
+Disyunción: ∨
+• S´ımbolos auxiliares: (, ).
+
+(Tablas de Verdad) 
+Una Tabla de Verdad representa los valores de verdad que puede tomar una proposición compuesta, 
+en función de todos los posibles valores de verdad de las proposiciones simples que componen esta última.

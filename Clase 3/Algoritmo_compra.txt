@@ -1,0 +1,53 @@
+
+Entradas: Página web, producto a comprar, tarjeta credito, usuario, correo electrónico.
+
+Sesión: 
+	Usuario: Clase
+Usuario: 
+	Nombre: string,
+	Run: string,	
+	correo electrónico: string,
+	clave: string,
+	Direcciones: array<Direccion>.
+Dirección: 
+	id: integer, 
+ 	Región: Clase, 
+	Comuna: Clase, 
+	descripción: string,
+	observaciones: string.
+Region: 
+	id: integer,
+        nombre: string
+Comuna: 
+	id: integer,
+        nombre: string
+Producto: 
+	id: integer, 
+	nombre: string, 
+	precio: integer,
+	descripcion: string
+Tarjeta Credito: 
+	Nro: string, 
+	fecha Date ? 
+        cvv: integer
+Carro compras:
+	Productos
+
+Proceso:
+1. Ingresa a página web 
+2. Buscar producto
+3. Agregar producto al carro de compras
+4. Ingresar al carro de compras
+4. En carro de compras, si desea más de una unidad aumentar cantidad.
+5. Seleccionar si quiere garantía extendida, por defecto no seleccionada.
+6. Seleccionar si quiere factura, por defecto boleta.
+7. Seleccionar si quiere retiro en tienda o despacho.
+8. Si elige despacho, ingresa dirección nueva o seleccionar una guardada.
+   Si elige retiro en tienda, elegir region y comuna, elegir tienda de retiro.
+9. Avanzar a realizar pago, elegir medio de pago.
+10. Si elige tarjeta de credito, ingresar datos de tarjeta y cvv, presionar pagar.
+11. Tienda entrega comprobante de rececpción de comprar.
+12. Tienda valida datos y envia correo de ok.
+13. Se recibe compra.
+
+
