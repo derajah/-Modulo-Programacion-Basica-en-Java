@@ -269,7 +269,7 @@ Escribir: "Ingrese cantidadNumeros ".
 Leer cantNumeros
 
 
-Para(i=1; i<cantNumeros; i++) hacer
+Para(i=1; i<=cantNumeros; i++) hacer
 
 	Escribir: "Ingrese numero ".
 	Leer numero
