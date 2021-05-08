@@ -1,0 +1,95 @@
+Funcion: SumarHasta100
+
+Variables: 
+
+j=100 (integer)
+Suma (integer) = 0
+
+Para(i=1; i<=j; i++) hacer
+
+	Suma = Suma + i
+
+finPara
+
+Fin Funcion
+
+
+Funcion: Multiplos9
+
+Variables: 
+
+j=100 (integer)
+Suma (integer) = 0
+
+
+Para(i=1; i<=j; i++) hacer
+
+
+	Si (i MOD 9 == 0) entonces
+		Suma = Suma + i	
+	FinSi
+
+finPara
+
+Fin Funcion
+
+
+Funcion: Multiplos9
+
+Variables: 
+
+j=100 (integer)
+i=0 (integer)
+Suma (integer) = 0
+
+
+Mientras i<=j
+
+	Si (i MOD 9 == 0) entonces
+		Suma = Suma + i	
+	FinSi
+	i++
+
+finMientras
+
+Fin Funcion
+
+
+Funcion: Multiplos9
+
+Variables: 
+
+j=100 (integer)
+i=0 (integer)
+Suma (integer) = 0
+
+
+Hacer 
+
+	Si (i MOD 9 == 0) entonces
+		Suma = Suma + i	
+	FinSi
+	i++
+
+Mientras i<=j
+
+Fin Funcion
+
+
+Funcion: SumarPorUsuario
+
+Variables: cantNumeros, numero, Suma = 0 (integer)
+
+Escribir: "Ingrese cantidadNumeros ".
+Leer cantNumeros
+
+Para(i=1; i<=cantNumeros; i++) hacer
+
+	Escribir: "Ingrese numero a sumar".
+	Leer numero
+	
+	Suma = Suma + numero
+
+finPara
+
+Fin Funcion
