@@ -1,0 +1,97 @@
+Funcion: numeroMenor
+
+Variables: elMenor=0(integer), ultimaVez=0
+
+Escribir: "Ingrese numero ".
+Leer numero
+
+elMenor = numero
+
+Escribir: "desea Agregar otro numero 1:Si, 2:No ".
+Leer ultimaVez
+
+Mientras ultimaVez=1
+
+	Escribir: "Ingrese numero ".
+	Leer numero
+	Si (numero < elMenor) entonces
+		elMenor = numero	
+	FinSi
+	Escribir: "desea Agregar otro numero 1:Si, 2:No ".
+	Leer ultimaVez
+
+Fin Mientras
+
+Escribir: "El numero menor es ", elMenor
+
+Fin Funcion
+
+
+
+Funcion: numeroMayor
+
+Variables: elMayor=0(integer), ultimaVez=0
+
+Escribir: "Ingrese numero ".
+Leer numero
+
+elMayor = numero
+
+Escribir: "desea Agregar otro numero 1:Si, 2:No ".
+Leer ultimaVez
+
+Mientras ultimaVez=1
+
+	Escribir: "Ingrese numero ".
+	Leer numero
+	Si (numero > elMayor) entonces
+		elMayor = numero	
+	FinSi
+	Escribir: "desea Agregar otro numero 1:Si, 2:No ".
+	Leer ultimaVez
+
+Fin Mientras
+
+	Escribir: "El numero mayor es ", elMayor
+
+Fin Funcion
+
+
+
+Funcion: edadesPromedio
+
+Variables: cantEdades, Suma = 0, elMenor, Promedio= 0(integer)
+
+Escribir: "Ingrese cantidad de Edades ".
+Leer cantEdades
+
+Si cantEdades == 0 entonces 
+	Escribir: "Debe ingresar mayor cantidad de edades ".
+Sino
+
+	Para(i=1; i<=cantEdades; i++) hacer
+
+		Escribir: "Ingrese edad ".
+		Leer edad
+		Suma = Suma + edad
+		Si(i==1) entonces
+			elMenor = edad
+			elMayor = edad
+		FinSi
+		Si edad < elMenor entonces
+			elMenor = edad
+		FinSi
+		Si edad > elMayor entonces
+			elMayor = edad
+		FinSi
+		
+	finPara
+
+	Promedio = Suma /  cantEdades;
+	Escribir: "La edad promedio es ", Promedio
+	Escribir: "La edad menor es ", elMenor
+	Escribir: "La edad mayor es ", elMayor
+
+FinSi
+
+Fin Funcion

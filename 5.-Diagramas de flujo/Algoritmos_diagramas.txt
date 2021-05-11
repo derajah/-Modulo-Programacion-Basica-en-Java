@@ -1,0 +1,87 @@
+DIAGRAMA 1
+
+Funcion: metrosPulgadas
+
+Variables: metros=0, pulgada = 0
+Constante: conv = 0,0254
+
+Escribir: "Ingrese metros ".
+Leer metros
+
+pulgada = metros/conv;
+
+
+Escribir: "Las pulgadas son ", pulgada
+
+Fin Funcion
+
+
+
+DIAGRAMA 2
+
+Funcion: costoLapiz
+
+Variables: L=0, Costo = 0;
+
+Escribir: "Ingrese cantidad de lapices ".
+Leer L
+
+Si ( L >= 1000) entonces
+	Costo = L*85
+Sino 
+	Costo = L*90
+Fin Si
+
+
+Escribir: "El costo es ", Costo
+
+Fin Funcion
+
+
+
+DIAGRAMA 3
+
+Funcion: costoTraje
+
+Variables: P=0, D = 0, T=0;
+
+Escribir: "Ingrese precio traje ".
+Leer P
+
+Si ( P >= 250000) entonces
+	D=P*0,15
+	T = P-D
+Sino 
+	D=P*0,08
+	T = P-D
+Fin Si
+
+
+Escribir: "El costo es ", T
+
+Fin Funcion
+
+
+DIAGRAMA 4
+
+Funcion: costoPlato
+
+Variables: P=0, T=0;
+
+Escribir: "Ingrese cantida personas P ".
+Leer P
+
+Si ( P <= 200) entonces
+	T = P*9500
+Sino 
+	Si ( P > 200 y P<=300) entonces
+		T = P*8500
+	Sino 
+		T = P*7500
+	Fin Si
+Fin Si
+
+
+Escribir: "El costo es ", T
+
+Fin Funcion
