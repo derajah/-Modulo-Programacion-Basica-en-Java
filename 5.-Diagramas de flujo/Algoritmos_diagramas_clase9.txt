@@ -1,0 +1,134 @@
+DIAGRAMA 1
+
+Funcion: gananciaUvas
+
+Variables: tipo="" (char), T,kg,tamaño=0 (integer)
+Constantes: PI
+
+Escribir: "Ingrese tipo uva ".
+Leer tipo
+Escribir: "Ingrese tamaño ".
+Leer tamaño
+Escribir: "Ingrese kilos ".
+Leer kg
+
+Si tipo=='A' entonces
+
+	Segun tamaño
+		(=1) T=(PI+20)*kg
+		(=2) T=(PI+30)*kg
+	FinSegun
+Sino
+
+	Si tipo=='B' entonces
+		
+		Segun tamaño
+			(=1) T=(PI-30)*kg
+			(=2) T=(PI-50)*kg
+		FinSegun
+		
+	FinSi
+
+FinSi
+
+Escribir: "Las ganancias son ", T
+
+Fin Funcion
+
+
+
+DIAGRAMA 2
+
+Funcion: alumnosPago
+
+
+Variables: A=0, CA=0, TB=0;
+
+Escribir: "Ingrese opción de cantidad de personas 1: >= 100; 2: entre 50 y 99; 3: entre 30 y 49; 4: menos de 30 y mas de 0 ".
+Leer OP
+
+Segun OP
+ ( =1) {
+		Escribir: "Ingrese numero alumno ".
+		Leer A
+		CA=6500; TB=A*CA}
+ ( =2) {
+		Escribir: "Ingrese numero alumno ".
+		Leer A
+		CA=7000; TB=A*CA}
+ ( =3) {
+		Escribir: "Ingrese numero alumno ".
+		Leer A
+		CA=9500; TB=A*CA}
+ ( =4) {
+		Escribir: "Ingrese numero alumno ".
+		Leer A
+		TB=400000; CA=TB/A}
+FinSegun
+
+
+Escribir: "El pago para compañia es ", TB, " y por alumno ", CA
+
+Fin Funcion
+
+DIAGRAMA 3
+
+
+Funcion: chisme
+
+Variables: D=0,CM=0 (integer)
+
+Escribir: "Ingrese día 1: Lunes, 2:Martes, 3:Miercoles, 4:Jueves, 5:Viernes, 6: Sabado, 7:Domingo".
+Leer D
+Escribir: "Ingrese cantidad de minutos ".
+Leer CM
+Escribir: "Ingrese turno M:matutino y V:vespertino ".
+Leer TUR
+
+
+Si CM >= 10 entonces
+
+	TLL = CM*50;
+	
+Sino
+
+	Si CM <= 5 entonces
+		
+		TLL = CM*100;
+		
+	Sino
+		Si CM > 5 y CM <= 8 entonces
+		
+			TLL = CM*80;
+		Sino
+			
+			TLL = CM*70;
+		
+		FinSi
+	
+	FinSi
+
+FinSi
+
+Si D==7 entonces
+
+	TLL=TLL + TLL*0,03;
+
+Sino
+	
+	Si TUR=='V' entonces
+		TLL=TLL + TLL*0,10;
+	Sino
+		TLL=TLL + TLL*0,15;
+	FinSi
+
+FinSi
+
+Escribir: "Total a pagar es ", TLL
+
+Fin Funcion
+
+
+
+
+
