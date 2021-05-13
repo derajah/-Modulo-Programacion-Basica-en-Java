@@ -76,7 +76,7 @@ DIAGRAMA 3
 
 Funcion: chisme
 
-Variables: D=0,CM=0 (integer)
+Variables: D=0,CM=0 (integer), TUR=""(string)
 
 Escribir: "Ingrese día 1: Lunes, 2:Martes, 3:Miercoles, 4:Jueves, 5:Viernes, 6: Sabado, 7:Domingo".
 Leer D
@@ -86,9 +86,9 @@ Escribir: "Ingrese turno M:matutino y V:vespertino ".
 Leer TUR
 
 
-Si CM >= 10 entonces
+Si CM > 10 entonces
 
-	TLL = CM*50;
+	TLL = 5*100 + 3*80 + 2*70 + (CM-10)*50;
 	
 Sino
 
@@ -99,10 +99,10 @@ Sino
 	Sino
 		Si CM > 5 y CM <= 8 entonces
 		
-			TLL = CM*80;
+			TLL = 5*100 + (CM-5)*80;
 		Sino
 			
-			TLL = CM*70;
+			TLL = 5*100 + 3*70 + (CM-8)*70;
 		
 		FinSi
 	

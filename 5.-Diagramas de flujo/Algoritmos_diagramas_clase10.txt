@@ -1,0 +1,102 @@
+DIAGRAMA 1
+
+Funcion: costoViaje
+
+Variables: cantPersona=0, cantKm=0, costoTotal=0, costoPersona=0, bus=0 (integer)
+
+
+Escribir: "Ingrese cantidad de personas ".
+Leer cantPersona
+Escribir: "Ingrese cantidad de kilometros ".
+Leer cantKm
+Escribir: "Ingrese cual autobus quiere cotizar 1:A, 2:B, 3:C ".
+Leer bus
+
+Segun bus
+	
+	(=1) {
+	
+		Si cantPersona>=20 entonces
+			costoTotal= cantPersona*cantKm*200;
+			costoPersona=200*cantKm;
+		Sino
+			costoTotal = 20*cantKm*200;
+			costoPersona = costoTotal/cantPersona;
+		FinSi
+	}
+	(=2) {
+	
+		Si cantPersona>=20 entonces
+			costoTotal= cantPersona*cantKm*250;
+			costoPersona=250*cantKm;
+		Sino
+			costoTotal = 20*cantKm*250;
+			costoPersona = costoTotal/cantPersona;
+		FinSi
+	}
+	(=3) {
+	
+		Si cantPersona>=20 entonces
+			costoTotal= cantPersona*cantKm*300;
+			costoPersona=300*cantKm;
+		Sino
+			costoTotal = 20*cantKm*300;
+			costoPersona = costoTotal/cantPersona;
+		FinSi
+	}
+
+FinSegun
+
+
+
+Escribir: "El costo segun autobus ", bus, " es ", costoTotal, " y por persona es ", costoPersona
+
+Fin Funcion
+
+
+DIAGRAMA 2
+
+Funcion: costoViaje
+
+Variables: CH=0, ham=0, costoTotal=0 (integer)
+
+
+Escribir: "Ingrese cantidad de hamburguesas ".
+Leer CH
+Escribir: "Ingrese que tipo de hamburguesa 1:simple, 2:doble, 3:triples ".
+Leer ham
+Escribir: "Ingrese medio pago 1:tarjeta, 2:efectivo ".
+Leer mp
+
+Segun ham
+	
+	(=1) {
+	
+		costoTotal= CH*2000;
+	}
+	(=2) {
+	
+		costoTotal= CH*2500;
+	}
+	(=3) {
+	
+		costoTotal= CH*2800;
+	}
+
+FinSegun
+
+Si mp=1 entonces
+	costoTotal = costoTotal*1,05;
+FinSi
+
+Escribir: "El costo es ", costoTotal
+
+Fin Funcion
+
+
+
+
+
+
+
+
