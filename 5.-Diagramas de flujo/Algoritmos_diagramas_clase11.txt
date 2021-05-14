@@ -1,0 +1,173 @@
+DIAGRAMA 1
+
+
+Funcion: doctor
+
+Variables: nC=0,CC=0, CA=0 (integer),
+
+Escribir: "Ingrese nro cita".
+Leer nC
+
+
+Si nC <= 3 entonces
+
+	CC = 200;
+	CA = nc*CC;
+	
+Sino
+
+	Si nC > 3 y nC <= 5 entonces
+
+		CC = 150;
+		CA = 3*200 + (nc-3)*CC ;
+	
+	Sino
+
+		Si nC > 5 y nC <= 8 entonces
+
+			CC = 100;
+			CA = 3*200 + 2*150 + (nc-5)*CC;
+	
+		Sino
+			
+			CC = 50;
+			CA = 3*200 + 2*150 + 3*100 + (nc-8)*CC;
+
+		FinSi
+
+	FinSi
+
+FinSi
+
+
+
+Escribir: "Total de la cita es ", CC, " y el acumulado es ", CA
+
+Fin Funcion
+
+DIAGRAMA 2
+
+
+Funcion: ProductosProduccion
+
+Variables: cP=0,gastosFab=0; costoManoObra=0, pV=0 (integer),
+
+
+Escribir: "Ingrese producto a producir".
+Leer p
+Escribir: "Ingrese costo de Materia Prima".
+Leer costoMateriaPrima
+
+
+Segun p
+
+	(=1) {
+			costoManoObra = 1,80*costoMateriaPrima;
+			gastosFab = 0,28*costoMateriaPrima;
+		 }
+	(=2) {
+			costoManoObra = 1,85*costoMateriaPrima;
+			gastosFab = 0,3*costoMateriaPrima;
+		 }
+	(=3) { 
+			costoManoObra = 1,75*costoMateriaPrima;
+			gastosFab = 0,35*costoMateriaPrima;
+	     }
+	(=4) {
+			costoManoObra = 1,75*costoMateriaPrima;
+			gastosFab = 0,28*costoMateriaPrima;
+		 }
+	(=5) {
+			costoManoObra = 1,80*costoMateriaPrima;
+			gastosFab = 0,3*costoMateriaPrima; 
+		}
+	(=6) {
+			costoManoObra = 1,85*costoMateriaPrima;
+			gastosFab = 0,35*costoMateriaPrima;
+		}
+	
+FinSegun
+
+	cP = costoMateriaPrima + costoManoObra + gastosFab;
+	pV = 1,45*cP;
+
+Escribir: "El precio de venta es ", pV
+
+
+Fin Funcion
+
+
+
+
+DIAGRAMA 3
+
+
+Funcion: sumar10numeros
+
+Variables: Total=0, numero = 0 (integer),
+
+
+Para(i=1; i<=10; i++) hacer
+
+Escribir: "Ingrese numero ";
+Leer numero;
+
+ Total = Total + numero;
+
+finPara
+
+Escribir: "El total es ", Total
+
+
+Fin Funcion
+
+
+
+DIAGRAMA 4
+
+
+Funcion: sumar10numeros
+
+Variables: SumaEdad=0, edad = 0, N=0 (integer),
+
+Escribir: "Ingrese cantidad de alumnos ";
+Leer N;
+
+Para(i=1; i<=N; i++) hacer
+
+Escribir: "Ingrese edad ";
+Leer edad;
+
+ SumaEdad = SumaEdad + edad;
+
+finPara
+
+Escribir: "La suma de las edades es ", SumaEdad
+
+
+Fin Funcion
+
+
+
+DIAGRAMA 5
+
+
+Funcion: sumar10numeros
+
+Variables: ahorrado=0, dinero = 0 (integer),
+
+
+Para(i=1; i<=12; i++) hacer
+
+Escribir: "Ingrese dinero depositado, mes ", i;
+Leer dinero;
+
+ ahorrado = ahorrado + dinero;
+
+finPara
+
+Escribir: "La suma ahorrada en 12 meses es  ", ahorrado
+
+
+Fin Funcion
+
