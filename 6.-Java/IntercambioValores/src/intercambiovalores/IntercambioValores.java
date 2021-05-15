@@ -37,6 +37,7 @@ public class IntercambioValores {
             
         } catch (Exception e) {
             System.out.println("Si ingreso letras intente de nuevo con números");
+            //que se puede poner en vez de esto
             main(args);
         }
         
