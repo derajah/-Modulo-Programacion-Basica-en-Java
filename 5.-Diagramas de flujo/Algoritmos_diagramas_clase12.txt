@@ -1,0 +1,93 @@
+DIAGRAMA 1
+
+
+Funcion: banco
+
+Variables: LA=0, tT = 0, LN=0 (integer),
+
+Escribir: "Ingrese tipo tarjeta".
+Leer tT
+
+Escribir: "Ingrese límite de credito actual".
+Leer LA
+
+Segun tT
+
+	(=1) {
+			LN = LA*1,25;
+		 }
+	(=2) {
+			LN = LA*1,35;
+		 }
+	(=3) { 
+			LN = LA*1,4;
+	     }
+	(otro) {
+		    LN = LA*1,5;
+	      }
+	
+FinSegun
+
+
+Escribir: "El nuevo límite de credito es ", LN
+
+Fin Funcion
+
+DIAGRAMA 2
+
+
+Funcion: transporte
+
+Variables: z=0,p=0; costoServicio=0(integer),
+
+
+Escribir: "Ingrese peso del paquete en gramos".
+Leer p
+Escribir: "Ingrese zona".
+Leer z
+
+Si p > 5000 entonces
+
+	Escribir: "No es posible despachar su paquete por superar el máximo peso permitido".
+
+	
+Sino
+
+	Segun p
+
+		(=1) {
+				costoServicio = p*110 ;
+			 }
+		(=2) {
+				costoServicio = p*100 ;
+			 }
+		(=3) { 
+				costoServicio = p*120 ;
+			 }
+		(=4) {
+				costoServicio = p*240 ;
+			 }
+		(=5) {
+				costoServicio = p*270 ; 
+			}
+		
+	FinSegun
+
+
+	Escribir: "El costo del despacho es ", costoServicio
+
+FinSi
+
+
+
+
+Fin Funcion
+
+
+
+
+
+
+
+
+
