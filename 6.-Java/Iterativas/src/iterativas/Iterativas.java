@@ -80,7 +80,7 @@ public class Iterativas {
         
     }
     
-     private static void multiplos(Scanner leer){
+    private static void multiplos(Scanner leer){
 
             System.out.println ("Ingrese el número para validar múltiplo ");
             int numeros=1, N=leer.nextInt();
