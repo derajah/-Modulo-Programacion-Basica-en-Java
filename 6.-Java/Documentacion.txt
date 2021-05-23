@@ -1,0 +1,7 @@
+Semana del 17 al 20 de Mayo:
+
+Se trabajaron estructuras iterativas en Java.
+Por mi cuenta investigue control de excepciones con la clase java.util.InputMismatchException
+Además del uso del operador ternario ?:  para reducir codigo de if else.
+Uso de array
+Y de la clase java.util.Arrays, para programar un push con el metodo copyOf. 
