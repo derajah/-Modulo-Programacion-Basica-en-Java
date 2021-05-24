@@ -94,17 +94,15 @@ public class TareaClase16Iterativas {
     }
     private static void acabadoDos(Scanner leer){
           
-            System.out.println ("Ingrese número positivo, si ingresa negativo programa se detiene ");
-            long numero=leer.nextLong();
-            int contador = 0;            
-            
-            while (numero >=0 ){
+            int numero, contador = 0;  
+
+            do{
+                System.out.println ("Ingrese número positivo, si ingresa negativo programa se detiene ");
+                numero=leer.nextInt();                
                 if(numero%10==2){
                     contador++;
                 }
-                System.out.println ("Ingrese número positivo, si ingresa negativo programa se detiene ");
-                numero=leer.nextLong();
-            }
+            } while(numero >=0);
             System.out.println("Introdujo " + contador + " números acabados en 2.");
     }
     
