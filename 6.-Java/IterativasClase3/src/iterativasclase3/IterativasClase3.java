@@ -130,7 +130,7 @@ public class IterativasClase3 {
             
             
         } catch (Exception e) {
-            System.out.println("Hora Inválida ");
+            System.out.println("Ha ocurrido un error " + e);
         }
             
             
