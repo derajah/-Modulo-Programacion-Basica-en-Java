@@ -141,10 +141,7 @@ public class IterativasClase4 {
         
         int i=0,j = tamanoArray-1, k=0;
         
-        do {            
-//            double a = (i+j);
-//            a = Math.ceil(a/2);
-//            k = (int)(a);
+        do {
             k= (i+j)/2;
             if(numeros[k] <= buscar)  {
                 i=k+1;
