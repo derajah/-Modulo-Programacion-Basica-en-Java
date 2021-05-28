@@ -11,15 +11,15 @@ package pooclase1;
  */
 public class Cliente {
     
-    public String rut;
-    public String nombre;
-    public String apellido1;
-    public String direccion;
-    public String email;
-    public long telefono;
-    public char genero;
-    public char estadoCivil;
-    public int edad;
+    private String rut;
+    private String nombre;
+    private String apellido1;
+    private String direccion;
+    private String email;
+    private long telefono;
+    private char genero;
+    private char estadoCivil;
+    private int edad;
     
     public String getRut(){
         return rut;
@@ -75,10 +75,5 @@ public class Cliente {
     public void setEdad(int edad){
         this.edad = edad;
     }
-    
-    
-    
-    
-    
     
 }

@@ -12,21 +12,38 @@ import java.util.*;
  */
 public class CuentaBancaria {
     
-    public String numeroCuenta="";
-    public char tipoCuenta;
+    public String numeroCuenta;
+    TipoCuenta tipoCuenta;
     public long saldo;
     Cliente cliente;
+    Ejecutivo ejecutivo;
     
-    public void crearCuenta(char tipoCuenta, long saldoInicial, Cliente cliente){
+    public CuentaBancaria(){
         
-        Random rnd = new Random();        
+    }
+    
+    public CuentaBancaria(TipoCuenta tipoCuenta, long saldoInicial, Cliente cliente, Ejecutivo ejecutivo){
+        Random rnd = new Random(); 
+        numeroCuenta="";
         for(int i=0; i<12; i++){
             numeroCuenta = numeroCuenta + String.valueOf(rnd.nextInt(10));
         }
         this.tipoCuenta = tipoCuenta;
         this.saldo = saldoInicial;
         this.cliente = cliente;
+        this.ejecutivo = ejecutivo;
     }
+    
+//    public void crearCuenta(char tipoCuenta, long saldoInicial, Cliente cliente){
+//        
+//        Random rnd = new Random();        
+//        for(int i=0; i<12; i++){
+//            numeroCuenta = numeroCuenta + String.valueOf(rnd.nextInt(10));
+//        }
+//        this.tipoCuenta = tipoCuenta;
+//        this.saldo = saldoInicial;
+//        this.cliente = cliente;
+//    }
 
     public long abonar(String numeroCuenta, long abono ){
         // se debería buscar la cuenta con el numero de cuenta
