@@ -16,7 +16,7 @@ public class Cliente {
     private String apellido1;
     private String direccion;
     private String email;
-    private long telefono;
+    private String telefono;
     private char genero;
     private char estadoCivil;
     private int edad;
@@ -51,10 +51,10 @@ public class Cliente {
     public void setEmail(String email){
         this.email = email;
     }
-    public long getTelefono(){
+    public String getTelefono(){
         return telefono;
     }
-    public void setTelefono(long telefono){
+    public void setTelefono(String telefono){
         this.telefono = telefono;
     }
     public char getGenero(){

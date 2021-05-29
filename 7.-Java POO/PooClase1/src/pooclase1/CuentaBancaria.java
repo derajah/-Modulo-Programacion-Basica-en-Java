@@ -53,7 +53,10 @@ public class CuentaBancaria {
     
     public long girar(String numeroCuenta, long giro ){
         // se debería buscar la cuenta con el numero de cuenta
-        saldo = saldo - giro;
+        if(validarGiro(numeroCuenta, giro)){
+            saldo = saldo - giro;
+        }
+        
         return  saldo;        
     }
     

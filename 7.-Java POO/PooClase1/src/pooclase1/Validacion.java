@@ -54,4 +54,45 @@ public class Validacion {
         return validacion;
     }
     
+    public static boolean validarTelefono(String telefono) {
+ 
+        // Patrón para validar el email
+        Pattern pattern = Pattern.compile("^(\\+?56)?(\\s?)(0?9)(\\s?)[9876543]\\d{7}$"); 
+        Matcher mather = pattern.matcher(telefono);
+        boolean validacion = false;
+        if (mather.find() == true) {
+            validacion = true;
+        } 
+        return validacion;
+    }
+    
+    public static boolean validarGenero(char genero) {
+ 
+        boolean validacion = false;
+        String generoString = String.valueOf(genero).toUpperCase();
+        if ("F".equals(generoString) || "M".equals(generoString)) {
+            validacion = true;
+        } 
+        return validacion;
+    }
+    
+    public static boolean validarEstadoCivil(char estado) {
+ 
+        boolean validacion = false;
+        String estadoString = String.valueOf(estado).toUpperCase();
+        
+        if ("S".equals(estadoString) || "C".equals(estadoString) || "V".equals(estadoString)) {
+            validacion = true;
+        } 
+        return validacion;
+    }
+    
+    public static boolean validarEdad(int edad) {
+ 
+        boolean validacion = false;
+        if (edad >=0 && edad <=65) {
+            validacion = true;
+        } 
+        return validacion;
+    }
 }
