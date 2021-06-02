@@ -14,23 +14,16 @@ import java.util.InputMismatchException;
  */
 public class Jugador {
     
-    private String nombre;
-    private String apellido1;
+    private String nombreCompleto;
     private char genero;
     private int edad;
     
-    public String getNombre(){
-        return nombre;
+    public String getNombreCompleto(){
+        return nombreCompleto;
     }
-    public void setNombre(String nombre){
-        this.nombre = nombre;
+    public void setNombreCompleto(String nombre){
+        this.nombreCompleto = nombre;
     }    
-    public String getApellido1(){
-        return apellido1;
-    }
-    public void setApellido1(String apellido1){
-        this.apellido1 = apellido1;
-    }
     public char getGenero(){
         return genero;
     }

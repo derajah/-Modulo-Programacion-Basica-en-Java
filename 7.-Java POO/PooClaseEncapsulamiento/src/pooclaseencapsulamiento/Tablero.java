@@ -4,15 +4,15 @@
  * and open the template in the editor.
  */
 package pooclaseencapsulamiento;
-
+import java.util.Arrays;
 /**
  *
  * @author Debora
  */
 public class Tablero {
     private int vidas = 6;
-    String[] palabras = new String[]{"lapiz", "goma", "libreta", "maestro", "examen", "matematicas"};
-
+    String[] palabrasAdultos = new String[]{"aplicaciones", "goma", "libreta", "maestro", "calavera", "paralelepipedo"};
+    String[] palabrasNinos = new String[]{"juguete", "goma", "dulce", "juego", "pelota", "pato"};
     private String palabra;
     private int aciertos = 0;
     private int tamaño;
@@ -20,13 +20,9 @@ public class Tablero {
     private Jugador jugador;
     private String opcion;
     
-    public Tablero(){  
-        this.jugador = new Jugador();
-        
-        
-        
-        
-        palabra = palabras[(int) (Math.random() * 5)];
+    public Tablero(Jugador jugador){  
+        this.jugador = jugador;
+        obtenerPalabra();
         tamaño = palabra.length();
         respuesta = new char[tamaño];         
         
@@ -36,9 +32,20 @@ public class Tablero {
         
     }
     
+    private void obtenerPalabra(){
+
+        if(jugador.getEdad() <= 10){
+            palabra = palabrasNinos[(int) (Math.random() * 5)];
+        } else {
+            palabra = palabrasAdultos[(int) (Math.random() * 5)];
+        }
+    }
     
     public int jugar() {
         int contador = 0;
+        System.out.println();
+        System.out.println("Bienvenid" + (jugador.getGenero() == 'F'? "a ":"o ") + jugador.getNombreCompleto());
+        System.out.println(jugador.getEdad() <= 10 ? "Como eres un niño te presentamos el conjunto de palabras posibles " + Arrays.toString(palabrasNinos) + "\n": "\n");
         while (aciertos != tamaño && vidas != 0) {
             System.out.println("========= AHORCADO ==========          VIDAS="+vidas +" Aciertos= "+aciertos);
             dibujar(vidas);
@@ -72,7 +79,8 @@ public class Tablero {
 
             System.out.print( respuesta[i] + " ");
         }
-        System.out.println("\n TU GANAS :)");
+        System.out.println();
+        System.out.println("TU GANAS :)");
     }
     
     public void dibujar(int i) {
