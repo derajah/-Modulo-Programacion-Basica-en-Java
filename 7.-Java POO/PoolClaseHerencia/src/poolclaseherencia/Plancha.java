@@ -31,7 +31,7 @@ public class Plancha extends Electrodomestico{
     }
     
     public Plancha(String marca, double precio, String color, char letraE, double peso, double tmax, boolean usavapor){
-        super(marca, precio, color, letraE, peso);
+        super("plancha", marca, precio, color, letraE, peso);
         this.TMax = tmax;
         this.usaVapor = usavapor;
     }

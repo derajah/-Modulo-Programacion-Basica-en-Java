@@ -40,7 +40,7 @@ public class Radio extends Electrodomestico{
     }
     
     public Radio(String marca, double precio, String color, char letraE, double peso, boolean cd, boolean mp3, boolean usb){
-        super(marca, precio, color, letraE, peso);
+        super("radio", marca, precio, color, letraE, peso);
         this.tieneCD = cd;
         this.tieneMP3 = mp3;
         this.tieneUSB = usb;

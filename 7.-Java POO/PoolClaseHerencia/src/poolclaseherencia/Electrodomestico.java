@@ -11,12 +11,21 @@ package poolclaseherencia;
  */
 public class Electrodomestico {
     
+    private String tipo;
     private String marca;
     private double precio_base;
     private String color;
     private char letraEnergia;
     private double peso; 
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    
     public String getMarca() {
         return marca;
     }
@@ -61,13 +70,17 @@ public class Electrodomestico {
         
     }
     
-    public Electrodomestico(String marca, double precio, String color, char letraE, double peso){
+    public Electrodomestico(String tipo, String marca, double precio, String color, char letraE, double peso){
         this.marca = marca;
         this.precio_base = precio;
         this.color = color;
         this.letraEnergia = letraE;
         this.peso = peso;
+        this.tipo = tipo;
     }
     
+    public void comprar(){
+        System.out.println("Gracias por su compra!");
+    }
     
 }
